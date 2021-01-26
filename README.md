@@ -1,6 +1,12 @@
 
 # firebase-emulator-suite
 
+## i just want the image
+
+```sh
+docker pull ghcr.io/io-digital/firebase-emulator-suite
+```
+
 ## usage
 
 start by generating a ci token with `firebase login:ci` and keep this aside for later.
