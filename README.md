@@ -3,7 +3,7 @@
 
 ## usage
 
-start by generating a CI token with `firebase login:ci` and keep this aside for later.
+start by generating a ci token with `firebase login:ci` and keep this aside for later.
 
 ensure you've got a `firebase.json` file for instructing the emulator suite which emulators to use.
 
@@ -57,9 +57,9 @@ take note of:
 * the volume mappings, paying special attention to:
   + volume `/home/firebase/.cache` will prevent re-downloading of individual firebase emulators every time the container is restarted
   + volume `/home/firebase/firebase.json` will not only configure **which** emulators run, but also configure the host/container networking as long as each emulator host is set to `0.0.0.0`
-* the environment variables, which include your firebase token generated earlier with `firebase login:ci`§
+* the environment variables, which include your firebase token generated earlier with `firebase login:ci`
 
-with all of the above in place, bring up the system as normal.
+with all of the above in place, bring up the docker-compose system as normal.
 
 you will notice on the first build/run that the firebase-emulator-suite will not respond for a while. this is normal, it is downloading the emulators.
 
