@@ -14,5 +14,6 @@ USER firebase
 WORKDIR /home/firebase
 RUN npm install firebase-tools
 COPY ./start.sh ./
+EXPOSE 9099 4000 5001 9000 8080 8085 5000
 
 ENTRYPOINT ["/home/firebase/start.sh"]
