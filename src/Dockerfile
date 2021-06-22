@@ -14,7 +14,10 @@ USER firebase
 WORKDIR /home/firebase
 RUN npm install firebase-tools
 COPY ./start.sh ./
+COPY ./firebase.json ./
 EXPOSE 9099 4000 5001 9000 8080 8085 5000
 VOLUME /home/firebase/.cache/
+VOLUME /home/firebase/functions
+VOLUME /home/firebase/firebase.json
 
 ENTRYPOINT ["/home/firebase/start.sh"]
