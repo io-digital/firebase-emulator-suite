@@ -1,4 +1,7 @@
 {
+  "functions": {
+    "source": "."
+  },
   "emulators": {
     "firestore": {
       "enabled": true,
