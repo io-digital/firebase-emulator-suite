@@ -14,13 +14,9 @@ USER firebase
 WORKDIR /home/firebase
 RUN npm install firebase-tools; mkdir -p functions
 COPY ./start.sh ./
-COPY ./package.json ./functions
-RUN cd functions; npm install
-EXPOSE 9099 4000 5001 9000 8080 8085 5000
 
+EXPOSE 9099 4000 5001 9000 8080 8085 5000
 VOLUME /home/firebase/firebase.json
-VOLUME /home/firebase/functions/index.js
-VOLUME /home/firebase/functions/package.json
 VOLUME /home/firebase/.cache/
 
 ENTRYPOINT ["/home/firebase/start.sh"]
