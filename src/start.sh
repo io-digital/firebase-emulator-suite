@@ -10,7 +10,7 @@ function log_errors {
 trap log_errors EXIT
 
 cd functions
-npm install
+npm install || true
 cd ..
 
 npx firebase \
