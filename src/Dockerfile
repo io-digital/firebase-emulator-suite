@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.source=https://github.com/io-digital/firebase-emu
 
 RUN apk --no-cache --update add \
   ca-certificates \
-  openjdk8-jre \
+  openjdk11-jre \
   nodejs \
   npm
 

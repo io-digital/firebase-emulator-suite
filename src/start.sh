@@ -1,6 +1,15 @@
 #!/bin/bash
 
 function log_errors {
+
+  node -v
+  npm -v
+  echo
+  ls -la
+  echo
+  env
+  echo
+
   for log in *.log; do
     echo logging $log
     cat $log
